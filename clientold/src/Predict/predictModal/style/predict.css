@@ -1,0 +1,98 @@
+.predictModelBase {
+    height: 100%;
+}
+
+.predictModelBase > .predictModelBody {
+    height:80%;
+    margin-top: 1%; 
+}
+
+.predictModelBase > .predictModelBody > .predicModelBody1{
+    height:100%;
+}
+
+.predictModelBase > .predictModelBody > .predicModelBody2{
+    height:100%;
+  
+}
+
+.predictModelBase > .predictModelBody > .predicModelBody1 > fieldset {
+    height:100%;
+}
+
+.predictModelBase > .predictModelBody > .predicModelBody1 > fieldset > legend {
+   color: #0b5494;
+   font-size: 100% !Important; 
+}
+
+.predictModelBase > .predictModelBody > .predicModelBody2 > fieldset {
+    height:100%;
+}
+
+.predictModelBase > .predictModelBody > .predicModelBody2 > fieldset > legend {
+   color: #0b5494;
+   font-size: 100% !Important; 
+}
+
+.predictModelBase > .predictModelBody > .predicModelBody2 > fieldset > div {
+    
+    height: 90% !Important;
+  
+}
+
+.predictModelBase > .predictModelPrevNext {
+    height:10%;
+    margin-top: 2%; 
+}
+
+
+@media screen and (max-height: 768px) {
+     .highchartHeight {
+        height: 290px;
+    }
+  
+    .predictAttributes {
+         height: 290px;
+         max-height: 290px
+    }
+}
+@media screen and (min-height: 798px)  {
+     .highchartHeight {
+        height: 380px;
+    }
+
+    .predictAttributes {
+         height: 380px;
+         max-height: 380px
+    }
+}
+
+@media screen and (min-height: 899px) {
+    .highchartHeight {
+        height: 400px;
+    }
+
+    .predictAttributes {
+         height: 400px;
+         max-height: 350px !Important;
+    }
+ 
+}
+    .predictAttributes {
+         height: 400px;
+         max-height: 350px !Important;
+    }
+
+
+
+    @media screen and (min-height: 1000px) {
+    .highchartHeight {
+        height: 400px;
+    }
+
+    .predictAttributes {
+         height: 450px;
+         max-height: 450px !Important;
+    }
+ 
+}

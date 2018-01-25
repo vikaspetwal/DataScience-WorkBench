@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <!-- <base href="/">    -->
+    <link rel="shortcut icon" type="image/gif" href="../../../Mobile/src/Home/images/capg.gif">
+    <title>Machine-Learning</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+    <script src="../../../bower_components/angular/angular.min.js"></script>
+    <script src="../../../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../../../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../../../Mobile/src/ui-bootstrap.js"></script>
+    <script src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../bower_components/ngstorage/ngStorage.js"></script>
+    <script src="../../../Mobile/src/app.js"></script>
+    <script src="../../../Mobile/src/Template/js/index.js"></script>
+    <script src="../../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../../../Mobile/src/route.js"></script>
+    <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link href="../../../bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../Mobile/src/Template/style/index.css">
+    <script src="../../../Mobile/src/Training/trainingTabs.js"></script>
+    <link rel="stylesheet" href="../../../Mobile/src/Training/trainingTabs.css">
+    <script src="../../../Mobile/src/Predict/predictTabs.js"></script>
+    <link rel="stylesheet" href="../../../Mobile/src/Predict/predictTabs.css">
+    <script src="../../../Mobile/src/Predict/selectModal/js/select.js"></script>
+    <link rel="stylesheet" href="../../../Mobile/src/Predict/selectModal/style/select.css">
+    <script src="../../../Mobile/src/Predict/predictModal/js/predict.js"></script>
+    <link rel="stylesheet" href="../../../Mobile/src/Predict/predictModal/style/predict.css">
+    <script src="../../../Mobile/src/Training/TrainModal/js/trainModal.js"></script>
+    <link rel="stylesheet" href="../../../Mobile/src/Training/TrainModal/style/trainModal.css">
+    <script src="../../../Mobile/src/Training/AttributeSelection/js/attributeSelection.js"></script>
+    <link rel="stylesheet" href="../../../Mobile/src/Training/AttributeSelection/style/attributeSelection.css">
+    <link rel="stylesheet" href="../../../bower_components/angular-ui-switch/angular-ui-switch.min.css" />
+    <script src="../../../bower_components/angular-ui-switch/angular-ui-switch.min.js"></script>
+    <script src="../../../bower_components/highcharts/highcharts.js"></script>
+    <script src="../../../bower_components/highcharts/modules/exporting.js"></script>
+    <script type="text/javascript" src="../../../bower_components/angular-number-picker/dist/angular-number-picker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../bower_components/angularjs-slider/dist/rzslider.css" />
+    <script src="../../../bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+    <script src="../../../Mobile/src/Training/UploadFile/js/upload.js"></script>
+    <link rel="stylesheet" href="../../../Mobile/src/Training/UploadFile/style/style.css">
+
+    <script src="../../../bower_components/highcharts/js/highcharts-more.js"></script>
+
+    <script src="../../../bower_components/highcharts/modules/solid-gauge.js"></script>
+
+    <link href="../../../bower_components/toastr/toastr.css" rel="stylesheet" />
+    <script src="../../../bower_components/toastr/toastr.js"></script>
+    
+
+
+</head>
+
+<body ng-app="MachineLearning">
+
+
+    <div ng-controller="TemplateController" ng-init="loadState()">
+
+
+
+        <!-- Main div -->
+
+
+
+
+
+
+        <div class="mainHeader">
+
+            <div class="row">
+                
+                
+                        <footer>
+                            <nav class="navbar navbar-default navbar-fixed-top" id="headerMain">
+                                <a href="homeM"><img class="logoImage" src='../../../Mobile/src/Template/images/capgemini-logo.png'/></a>
+                                <span class="appName">Machine Learning For Data Science</span>
+                            </nav>
+                
+                
+                        </footer>
+                    </div>
+        
+
+        </div>
+
+        <div class="row">
+            <div class="container">
+                <div id="page-content-wrapper">
+                    <div>
+
+                        <div class="row" id="uiViewDiv">
+                            <div class="col-xs-12">
+                                <div ui-view></div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+    <br><br>
+
+
+    
+
+
+    <div class="row">
+
+
+        <footer>
+            <nav class="navbar navbar-default navbar-fixed-bottom" id="footerMain">
+
+                <div class="footerContent">
+                    <p> <a href="mailto:nathanael-theophilus.easterson@capgemini.com" id="mailTo" class="pull-left">Click here to report issues</a>                        &copy; 2017 Capgemini</p>
+                </div>
+            </nav>
+
+
+        </footer>
+    </div>
+
+
+
+
+
+
+</body>
+
+<script>
+    $("#menu-toggle").click(function (e) {
+        e.preventDefault();
+        $("#wrapper").toggleClass("toggled");
+    });
+
+    function openNav() {
+        document.getElementById("mySidenav").style.width = "40%";
+
+    }
+
+    function closeNav() {
+        document.getElementById("mySidenav").style.width = "0";
+    }
+</script>
+
+
+
+</html>

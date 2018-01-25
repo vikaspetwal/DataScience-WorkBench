@@ -1,0 +1,89 @@
+<div class="selectModal_Reg" ng-controller="machineController_Reg">
+
+    <div class="selectModalNames_Reg" class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 border1 selectModalAboveField_Reg ">
+            <fieldset class="scheduler-border">
+                <legend class="scheduler-border">Select a model that you want to use for prediction</legend>
+                <div ng-show="modelDetails.length==0" class="contentHeight_Reg">
+                    <h3 class="text-center">No Models Available</h3>
+                    <h3 class="text-center">Go to Training tab to Create Models </h3>
+                </div>
+                <div ng-show="modelDetails.length!=0" class="contentHeight2_Reg">
+                    <div class="searchBlock" class="row">
+                        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 col-xs-offset-8 col-sm-offset-8 col-md-offset-8 col-lg-offset-8">
+                            <form action="" class="search-form ">
+                                <div class="form-group has-feedback">
+                                    <label for="search" class="sr-only">Search</label>
+                                    <input type="text" ng-model="filter" class="form-control" name="search" id="search" placeholder="search">
+                                    <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="ModelBlockData_Reg" class="row">
+                        <div ng-repeat="items in modelDetails|filter:filter">
+                            <div style="height: 130px !Important;" class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                                <div style="cursor:pointer;color: white" class="offer offer-radius offer-primary">
+                                    <div>
+                                        <span style="font-size: 15px;margin-right:2%; margin-top: 2%; " class="glyphicon glyphicon-trash pull-right" ng-click="deleteModel(items)"
+                                            data-toggle="modal" data-target="#myModal"></span>
+                                    </div>
+                                    <div ng-class="{'selected': id === {{$index}}}" ng-click="applyCss($index,items._id)" class="offer-content" style="height:80px;">
+                                        <br>
+                                        <center> <span style="color:white;font-size: 100%;text-justify:distribute;" > {{items.name| limitTo: 12 }}{{items.name.length > 12 ? '...' : ''}}
+                                        </span></center>
+                                        <center><span style="color:white;text-justify:distribute">Classifier : {{items.classifier}}</span></center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </fieldset>
+            </div>
+        </div>
+
+
+        <div ng-show="IsHiddenPanel" class="modalDetails_Reg" class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 border1 modalDataAboveField_Reg">
+                <fieldset class="scheduler-border">
+                    <div   ng-repeat="models in resArray">
+                        <table class="table table-hover" style="color: #0b5494; font-family: Times New Roman">
+                            <tbody ng-hide="IsHidden">
+                                <tr>
+                                    <td>Model name : {{models.name}}
+                                    </td>
+                                    <td>Classifier : {{models.classifier}}</b> 
+                                    <td>Model creation date :{{models.date | date:'dd-MM-yyyy'}}</b>
+                                </tr>
+
+                                <tr>
+                                    <td>Total number of rows: {{models.totalNumberOfRows}}</b>
+                                    <td>Number of rows used for training : {{models.numberOfRowsForTraining}}</b>
+                                    <td>Number of rows used for testing : {{models.numberOfRowsForTesting}}</b>
+                                </tr>
+                                <tr>
+                                    <td>Number of attributes: {{models.totalNumberOfAttributes}}</b>
+                                    <td>Number of attributes selected : {{models.numberOfAttributesUsed}}</b>
+                                    <td>
+                                        <p style="color:green;">Accuracy :{{models.accuracy | number:2}} </p>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+
+
+
+        <div class="nextPrevBtnModel">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 border1">
+                <input ng-hide="nextDisable" style="margin-top: 1%;" type="button" ng-click="goNext()" value="NEXT" class="btn btn-primary pull-right " />
+            </div>
+        </div>
+
+    </div>

@@ -1,0 +1,15 @@
+
+<div class="tabsHeight" ng-controller="TrainingTabController">
+ 
+  <div class="tabsHeightChild1" >
+    <ul class="nav nav-pills nav-wizard">
+      <li style="width: 33.33%" class={{tabColor.uploadData}}><a ng-click="changeTab('uploadData')"  ui-sref=".uploadCSV" index="1">Step 1: Upload Dataset</a></li>
+      <li style="width: 33.33%" class={{tabColor.selectAttribute}}><a index="2">Step 2: Select Attributes </a></li>
+      <li style="width: 33.33%" class={{tabColor.trainModel}}><a index="3">Step 3: Train Model</a></li>
+    </ul>
+  </div>
+ 
+ 
+  <div class="tabsHeightChild2" ui-view></div>
+
+</div>

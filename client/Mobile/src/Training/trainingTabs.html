@@ -1,0 +1,44 @@
+
+
+<div ng-controller="TrainingTabController">
+  <div class="row">
+    <div class="col-xs-1" id="trainingSideNav"> 
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <br>
+        <a ui-sref="training({new:true})" class="selectedTab" ui-sref-opts="{reload: true, notify: true}"><i class="fa fa-connectdevelop" id="SideNavlogos" aria-hidden="true"> </i> <span class="sideNavNames" >Train Model</span>  </a>
+        <a ui-sref="predict({new:true})"  ui-sref-opts="{reload: true, notify: true}"> <i class="fa fa-bar-chart" id="SideNavlogos" aria-hidden="true"> </i> <span class="sideNavNames"> Predict</span> </a>
+        
+
+    </div>
+
+
+    <span class="openSideNav" onclick="openNav()" >&#9776;</span>
+  
+  </div>
+    <div class="col-xs-11" id="tabsDiv">
+      
+        <div class="tabsHeightChild1" >
+            <ul class="nav nav-pills nav-wizard">
+              <li style="width: 33.33%" class={{tabColor.uploadData}}><a ng-click="changeTab('uploadData')" ui-sref=".uploadCSV" index="1">Upload</a></li>
+              <li style="width: 33.33%" class={{tabColor.selectAttribute}}><a index="2">Select</a></li>
+              <li style="width: 33.33%" class={{tabColor.trainModel}}><a index="3">Train</a></li>
+            </ul>
+          </div>
+  
+    <!-- <uib-tabset active="tabs.tabIndex">
+
+      
+        <uib-tab  id="TrainingnavValues" ui-sref=".uploadCSV" index="1"   ng-click="showTabValue(33.33,1)"  heading="Upload Dataset"></uib-tab>
+        <uib-tab  id="TrainingnavValues" ui-sref=".selectAttribute" index="2"   ng-click="showTabValue(66.66,2)"   heading="Attribute Selection"></uib-tab>
+        <uib-tab  id="TrainingnavValues" ui-sref=".trainModal" index="3"  ng-click="showTabValue(100,3)" heading="Model Training"></uib-tab>
+      </uib-tabset>
+ 
+     <uib-progressbar class="progress-striped active" max="100" value=tabs.tabValue ><span class="tabStep">{{tabs.tabStep}}</span></uib-progressbar> -->
+
+    </div>
+  </div>
+
+  <div ui-view></div>
+
+</div>

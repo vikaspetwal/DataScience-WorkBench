@@ -1,0 +1,167 @@
+<div class="mainClassifierHeight" ng-controller="TrainModalCtrl">
+
+    <div class="classifierHeightMain" class="row">
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 classifierHeight">
+            <fieldset class="scheduler-border ">
+                <legend class="scheduler-border">Select a classifier for training model</legend>
+                <div class="classifierDivHeight">
+                    <div ng-repeat="data in classifiers">
+                        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                            <div style="cursor:pointer" class="offer offer-radius offer-primary setClassifierHeight">
+                                <div ng-class="{'selected': id === {{$index}}}" ng-click="applyCss($index, data.shortName)" class="offer-content" style="height: 100% !Important;">
+                                    <center>
+                                        <span style="color:white;" class="lead"> {{data.name}}
+                                        </span>
+                                    </center>
+                                    <br>
+                                    <center>
+                                        <span style="color:white;text-justify:distribute !Important">{{data.description}}</span>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <input ng-disabled="trainModalDisable" ng-click="trainModel()" type="button" style="margin-right: 15px" class="btn btn-primary pull-right"
+                        value="TRAIN MODEL" />
+
+
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="classifierDataHeightMain" class="row">
+        <div ng-hide="showAccuracy" class="col-xs-12 col-sm-12 col-md-12 col-lg-12 classfierDataHeight">
+            <fieldset class="scheduler-border ">
+                <legend class="scheduler-border">Dataset summary</legend>
+                <table class="table table-hover" style="color: #0b5494; font-family: Times New Roman;">
+
+                    <tr>
+                        <td>
+                            <span><b>Attribute Count: {{trainedModel.totalNumberOfAttributes}}</b></span>
+                        </td>
+                        <td>
+                            <span><b>Selected Attribute Count: {{trainedModel.numberOfAttributesUsed}}</b></span>
+                        </td>
+                        <!--<td>
+                            <span><b>Training Row Count: {{trainedModel.numberOfRowsForTraining}}</b></span>
+                        </td>-->
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <span><b>Total Row Count: {{trainedModel.totalNumberOfRows}}</b></span>
+                        </td>
+                        <!--<td>
+                            <span><b>Testing Row Count: {{trainedModel.numberOfRowsForTesting}}</b></span>
+                        </td>-->
+                        <td>
+                            <b>Accuracy: <span ng-if="trainedModel.accuracy > 70" style="color:green">{{trainedModel.accuracy | number:2}}
+                                    </span>
+                                    <span ng-if="trainedModel.accuracy > 50 && trainedModel.accuracy < 70 " style="color:green">{{trainedModel.accuracy | number:2}}
+                                    </span>
+                                    <span ng-if="trainedModel.accuracy > 30 && trainedModel.accuracy < 50" style="color:yellow">{{trainedModel.accuracy | number:2}}                  
+                                    </span>
+                                    <span ng-if="trainedModel.accuracy > 0 && trainedModel.accuracy < 30" style="color:red">{{trainedModel.accuracy | number:2}}
+                                    </span>
+                                </b>
+                        </td>
+                    </tr>
+
+                </table>
+            </fieldset>
+        </div>
+    </div>
+
+
+    <div class="NextPrevBtn" class="row">
+
+        <div style="margin-top: 1%" class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <input type="button" ng-click="goBack()" value="BACK" class="btn btn-primary pull-left" />
+        </div>
+
+        <div style="margin-top: 1%" class="col-xs-2 col-sm-2 col-md-2 col-lg-3">
+        </div>
+        <div style="margin-top: 1%" class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+            <input type="button" ng-click="showScatterGraph()" data-toggle="modal" data-target="#myModal" ng-show="cancelButton" value="GRAPH" class="btn btn-primary pull-left"/>            
+        </div>
+
+
+
+
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+ 
+
+                         <div class="dropdown" ng-show="nlinearflag">
+                                <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Degree
+                                        <span class="caret"></span></button>
+                                <ul class="dropdown-menu" style="right: 50%; left: 40%;">
+                                    <li ng-repeat="a in degreeArray" ng-click="selectDegree(a)"><a href="#" style="color: #0070ad" >{{a}}</a></li>
+                                </ul>
+                               <span ng-bind="selectedDegree" style="color: white;"></span>
+                            </div> 
+                           
+                            
+                    </div>
+                    
+           
+                    <div class="modal-body" ng-show="nlinearflag" style="height: 300px;overflow-y: auto;">
+                        
+                            <div id = "container5" style = "width: 550px; height: 270px; margin: 0 auto"></div>
+                      
+                    </div>
+
+                    
+                    <div  class="modal-body" ng-show="linearflag" style="height: 300px;overflow-y: auto;">
+                            
+                             <div id = "container1" style = "width: 550px; height: 270px; margin: 0 auto"></div>
+                     </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" style="float: left" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-success" style="float: right" data-dismiss="modal">Save</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div style="margin-top: 1%" class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+        </div>
+        <div style="margin-top: 1%" class="col-xs-3 col-sm-3 col-md-3 col-lg-3" ng-show="cancelButton">
+            <span style="color: #0b5494;"><input class="form-control " ng-keyup="checkModel()" ng-model="modelName" placeholder="Enter model name" type="text" ng-readonly="trainedModel.accuracy==undefined"/></span>
+        </div>
+        <div style="margin-top: 1%" class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <input ng-show="cancelButton" type="button" ng-click="saveModel()" value="SAVE MODEL" class="btn btn-success" ng-disabled="message"
+            />
+        </div>
+        
+        <div style="margin-top: 1%" class="col-xs-1 col-sm-1 col-md-2 col-lg-1">
+            <input ng-show="cancelButton" ng-click="cancelTraining()" type="button" class="btn btn-danger pull-right" value="CANCEL">
+        </div>
+    </div>
+</div>

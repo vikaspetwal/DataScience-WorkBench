@@ -1,0 +1,1 @@
+var app = angular.module('MachineLearning', ['ngStorage','ui.router', 'ui.bootstrap','ngAnimate','ngSanitize','uiSwitch', 'rzModule','ngNumberPicker']);

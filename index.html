@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="icon" src="client/src/Home/images/Blockchain-Tech.jpg">
+    <link rel="shortcut icon" type="image/gif" href="../../../src/Home/images/capg.gif">
+    <title>Machine-Learning</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../bower_components/highcharts/highcharts.js"></script>
+    <script src="../../../bower_components/highcharts/js/highcharts-more.js"></script>
+    <script src="../../../bower_components/highcharts/modules/exporting.js"></script>
+    <script src="../../../bower_components/highcharts/modules/solid-gauge.js"></script>
+    <script src="../../../bower_components/angular/angular.min.js"></script>
+    <script src="../../../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../../src/histogram-bellcurve.js"></script>
+    <script src="../../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../../../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../../../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="../../../src/ui-bootstrap.js"></script>
+    <script src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../bower_components/ngstorage/ngStorage.js"></script>
+    <script src="../../../src/app.js"></script>
+    <script src="../../../src/Template/js/index.js"></script>
+    <script src="../../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../../../src/route.js"></script>
+    <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link href="../../../bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../../src/Template/style/index.css">
+    <script src="../../../src/Training/trainingTabs.js"></script>
+    <link rel="stylesheet" href="../../../src/Training/trainingTabs.css">
+    <script src="../../../src/Predict/predictTabs.js"></script>
+    <link rel="stylesheet" href="../../../src/Predict/predictTabs.css">
+    <script src="../../../src/Predict/selectModal/js/select.js"></script>
+    <link rel="stylesheet" href="../../../src/Predict/selectModal/style/select.css">
+    <script src="../../../src/Predict/predictModal/js/predict.js"></script>
+    <link rel="stylesheet" href="../../../src/Predict/predictModal/style/predict.css">
+    <script src="../../../src/Training/TrainModal/js/trainModal.js"></script>
+    <link rel="stylesheet" href="../../../src/Training/TrainModal/style/trainModal.css">
+    <script src="../../../src/Training/AttributeSelection/js/attributeSelection.js"></script>
+    <link rel="stylesheet" href="../../../bower_components/angular-ui-switch/angular-ui-switch.min.css" />
+    <script src="../../../bower_components/angular-ui-switch/angular-ui-switch.min.js"></script>
+
+
+    <script type="text/javascript" src="../../../bower_components/angular-number-picker/dist/angular-number-picker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../bower_components/angularjs-slider/dist/rzslider.css" />
+    <script src="../../../bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+    <script src="../../../src/Training/UploadFile/js/upload.js"></script>
+    <link rel="stylesheet" href="../../../src/Training/UploadFile/style/style.css">
+    <link rel="stylesheet" href="../../../src/Training/AttributeSelection/style/attributeSelection.css">
+
+    <link href="../../../bower_components/toastr/toastr.css" rel="stylesheet" />
+    <script src="../../../bower_components/toastr/toastr.js"></script>
+    <link rel="stylesheet" href="../../../src/Training/AttributeSelection/style/attributeSelection.css">
+
+
+    <script src="../../../src/Regression/Training/trainingTabs_Reg.js"></script>
+    <script src="../../../src/Regression/Predict/predictTabs_Reg.js"></script>
+    <link rel="stylesheet" href="../../../src/Regression/Predict/predictTabs_Reg.css">
+    <script src="../../../src/Regression/Predict/selectModel_Reg/js/selectModel_Reg.js"></script>
+    <link rel="stylesheet" href="../../../src/Regression/Predict/selectModel_Reg/style/selectModel_Reg.css">
+    <script src="../../../src/Regression/Predict/predictModel_Reg/js/predictModel_Reg.js"></script>
+    <link rel="stylesheet" href="../../../src/Regression/Predict/predictModel_Reg/style/predictModel_Reg.css">
+
+    <script src="../../../src/Regression/Training/UploadFile/js/regUpload.js"></script>
+    <script src="../../../src/Regression/Training/AttributeSelection/js/RegattributeSelection.js"></script>
+        <script src="../../../src/Regression/Training/TrainModal/js/trainModal.js"></script>
+          <link rel="stylesheet" href="../../../src/Regression/Training/TrainModal/style/trainModal_Reg.css">
+    
+    
+
+
+
+</head>
+
+<body ng-app="MachineLearning">
+
+    <div ng-controller="TemplateController" ng-init="loadState()" class="base-fluid">
+
+        <div class="row header">
+
+            <div class="col-xs-4 col-sm-4 col-md-2 col-lg-2">
+                <a href="home"><img src='../../../src/Home/images/capgemini-logo.png' /></a>
+            </div>
+            <div class="col-xs-8 col-sm-8 col-md-10 col-lg-10">
+                <p style="text-align:left;">Machine Learning For Data Science
+                    <p>
+            </div>
+
+        </div>
+
+        <div class="row content-body">
+            <div id="wrapper">
+                <div id="sidebar-wrapper">
+                    <ul class="sidebar-nav" style="margin-left:0;">
+                        <li class="sidebar-brand">
+                            <a href="#menu-toggle" id="menu-toggle" style="margin-top:20px;float:right;"> <i class="fa fa-bars " style="font-size:20px !Important;" aria-hidden="true" aria-hidden="true"></i>   
+                        </li>
+
+
+
+                <!--      <li>
+                                    <div >
+                                <span  style="margin-left:5px;">Train Model</span> 
+                </div>
+                </li>
+-->
+<br><br><br>
+
+
+
+
+
+                     
+                   
+                               <li>
+                                    <div ng-class="{selectedTab : activeMenu.class === 'training'}">
+                                    <a ui-sref="training({new:true})" ui-sref-opts="{reload: true, notify: true}"><i  class="fa fa-connectdevelop " aria-hidden="true"> </i> <span  style="margin-left:5px;">Train Model</span>  </a>
+                </div>
+                </li>
+                <li>
+                    <div ng-class="{selectedTab : activeMenu.class === 'predict'}">
+                        <a ui-sref="predict({new:true})" ui-sref-opts="{reload: true, notify: true}"> <i  class="fa fa-bar-chart " aria-hidden="true"> </i> <span style="margin-left:5px;"> Predict</span> </a>
+                    </div>
+                </li>
+
+
+
+
+                <li>
+                    <div ng-class="{selectedTab : activeMenu.class === 'regTraining'}">
+                        <a ui-sref="regTraining({new:true})" ui-sref-opts="{reload: true, notify: true}"> <i  class="fa fa-connectdevelop " aria-hidden="true"> </i> <span style="margin-left:5px;"> Training Regression</span> </a>
+                    </div>
+                </li>
+
+
+                <li>
+                    <div ng-class="{selectedTab : activeMenu.class === 'regPredict'}">
+                        <a ui-sref="regPredict({new:true})" ui-sref-opts="{reload: true, notify: true}"> <i  class="fa fa-bar-chart " aria-hidden="true"> </i> <span style="margin-left:5px;"> Predict Regression</span> </a>
+                    </div>
+                </li>
+
+                </ul>
+            </div>
+            <div id="page-content-wrapper">
+                <div>
+                    <div class="row">
+                        <div ui-view class="col-xs-12 col-sm-12 col-md-12 col-lg-12 border1">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row footer">
+        <div class="col-xs-12 col-md-12 col-lg-12 border1">
+            <div style="text-align:right;color:white;margin-top: 1.5%;margin-right: 2%;">
+                <p> <a href="mailto:nathanael-theophilus.easterson@capgemini.com" class="pull-left" style="color:white;margin-left: 2%;">Click here to report issues</a>                    &copy; 2017 Capgemini</p>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <script>
+        $("#menu-toggle").click(function (e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+    </script>
+</body>
+
+</html>

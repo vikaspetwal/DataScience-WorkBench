@@ -1,0 +1,184 @@
+<div class="pageContentContainer" ng-controller="machineController">
+
+  <div ng-show="loader" class="loader"></div>
+  <div ng-class="{blur: loader}">
+    <div class="row">
+
+      <div class="col-xs-12">
+          <fieldset class="scheduler-border">
+              <legend class="scheduler-border"><h5>Select a model that you want to use for prediction</h5></legend>
+ 
+
+  
+        
+
+
+
+        <div ng-show="modelDetails.length!=0" style="height: 18em;overflow-y: auto; ">
+
+          <div class="row">
+            <div class="col-md-4 col-md-offset-8">
+              <form action="" class="search-form ">
+                <div class="form-group has-feedback">
+                  <label for="search" class="sr-only">Search</label>
+                  <input type="text" ng-model="filter" class="form-control" name="search" id="search" placeholder="search">
+                  <span class="glyphicon glyphicon-search form-control-feedback"></span>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div ng-repeat="items in modelDetails | orderBy: '+' :true |filter:filter">
+            <div class="col-sm-4">
+
+              <div>
+             
+                <div class="modal fade" id="myModal" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h5 class="modal-title">Confirm Deletion</h5>
+                      </div>
+                      <div class="modal-body">
+                        <p>Are you sure you want to delete {{selectedModel.name}} Model</p>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-toggle="modal" data-target="#myModal2" data-dismiss="modal">Yes</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+
+                      </div>
+                    </div>
+
+                  </div>
+                </div>
+
+                <div class="modal fade" id="myModal2" role="dialog">
+                  <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <!--<h4 class="modal-title"><span class="glyphicon glyphicon-lock"></span> Login</h4>-->
+                      </div>
+                      <form class="form-signin" ng-submit="removeModel(selectedModel._id)">
+                        <br>
+                        <!--<div class="col-sm-offset-2 col-sm-2 ">
+                                   Enter PIN:
+                              </div>-->
+                        <div class="col-sm-offset-2 col-sm-8">
+                          <input type="password" class="form-control" name="password" ng-model="user.pin" placeholder="Enter PIN" required/><br>
+                        </div>
+
+                        <br>
+                        <div><br><br></div>
+
+                      </form>
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+
+              <div style="cursor:pointer;color:white;" class="offer offer-radius offer-primary" >
+
+                <span style="font-size: 15px;margin-right: 3%;" class="glyphicon glyphicon-trash pull-right"  ng-click="deleteModel(items)" data-toggle="modal"
+                data-target="#myModal"></span>
+                <div ng-class="{'selected': id === {{$index}}}" ng-click="applyCss($index,items._id)" class="offer-content" style="height:4.5em;">
+              
+                  <center> <span style="color:white;" class="lead"> {{items.name| limitTo: 12 }}{{items.name.length > 12 ? '...' : ''}}
+                            </span></center>
+
+
+                  <center><span style="color:white;text-justify:distribute">Classifier : {{items.classifier}}</span></center>
+                            
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div ng-show="modelDetails.length==0" style="height: 20em;overflow-y: auto;overflow-x: hidden; ">
+            <h1 class="text-center">No Models Available</h1>
+            <h1 class="text-center">Go to Training tab to Create Models </h1>
+          </div>
+  
+
+
+          </fieldset>
+      </div>
+    </div>
+
+
+
+
+    <div class="row">
+
+       <div class="col-xs-12">
+        
+
+      <div class="tab-panel in active" id="myModal" ng-show="IsHiddenPanel">
+
+        <div class="panel-body" style="height: 1em">
+
+          <div ng-repeat="models in resArray">
+              <fieldset class="scheduler-border">
+            <table class="table" style="color:#18588E;font-size: 11px; font-family: Times New Roman;">
+
+              <tbody ng-hide="IsHidden" >
+                <tr>
+                  <td><b><span class="ModelValues">Model Name : </span></b> <br> {{models.name}}
+                  </td>
+                  <td><b><span  class="ModelValues">Classifier Name :</span> </b> <br> {{models.classifier}} </td>
+                  <td><b><span  class="ModelValues">Model Creation Date :</span> </b> <br>{{models.date | date:'dd-MM-yyyy'}}</td>
+                </tr>
+
+                <tr>
+                  <td><b><span  class="ModelValues">Number Of Rows :</span> </b> <br> {{models.totalNumberOfRows}}</td>
+                  <td><b><span  class="ModelValues">Number Of Rows Used For Training :</span> </b> <br> {{models.numberOfRowsForTraining}}</td>
+                  <td><b><span  class="ModelValues">Number Of Rows Used For Testing :</span> </b>{{models.numberOfRowsForTesting}}</td>
+                </tr>
+                <tr>
+                  <td><b><span  class="ModelValues">Number Of attributes :</span> </b> <br>  {{models.totalNumberOfAttributes}}</td>
+                  <td><b><span  class="ModelValues">Number Of attributes Selected :</span> </b> <br> {{models.numberOfAttributesUsed}}</td>
+                  <td>
+                    <b><span  class="ModelValues">Accuracy :</span></b><br>{{models.accuracy | number:2}} 
+                  </td>
+                </tr>
+
+                <tr>
+
+              </tbody>
+            </table>
+              </fieldset>
+          </div>
+        </div>
+      </div>
+       </div>
+    </div>
+
+   
+
+    
+   
+    <div class="row" style="padding-bottom:20px;margin-top: 65%">
+      <div class="col-xs-12">
+
+
+        <input ng-hide="nextDisable" type="button" ng-click="goNext()" value="NEXT" class="btn btn-primary pull-right" style="margin-right: 10px;"/>
+
+      </div>
+
+    
+        
+     
+    </div>
+
+ 
+
+  </div>
+</div>

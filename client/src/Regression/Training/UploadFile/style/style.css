@@ -1,0 +1,189 @@
+.fileUploadBase {
+    height: 100%;
+}
+
+.fileUploadBase > .uploadHeading {
+    height:55%;
+    margin-top: 1%; 
+}
+
+.fileUploadBase > .uploadHeading > .uploadCSVFile {
+    height:100% !Important; 
+}
+
+.fileUploadBase > .uploadHeading > .uploadCSVFile > fieldset {
+    height:95% !Important;
+}
+
+.fileUploadBase > .uploadHeading > .uploadCSVFile > fieldset > legend {
+   color: #0b5494;
+   font-size: 100% !Important; 
+}
+
+.containerr {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.containerr2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 140%;
+    color:#0b5494;
+}
+
+.fileUploadBase > .uploadSlider  {
+    height:30%;    
+}
+
+.fileUploadBase > .uploadSlider > .sliderHeight  {
+    height:90%; 
+     width: 100%;
+}
+
+.fileUploadBase > .uploadSlider > .sliderHeight > fieldset {
+    height:100%; 
+}
+
+.fileUploadBase > .uploadSlider > .sliderHeight > fieldset > legend {
+  color: #0b5494;
+  font-size: 100% !Important;  
+}
+
+.fileUploadBase > .uploadNextBtn {
+    height:10%; 
+}
+
+.fileUploadBase > .uploadNextBtn > div{
+    height:10%; 
+}
+
+.uploaded {
+    padding: 0;
+    height: 14px;
+    border-radius: 10px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#66cc00), to(#4b9500));
+    border-image: initial;
+}
+.dropbox {
+    border: 2px solid #0b5494;
+    border-radius: 3px;
+    /*background-color: #f2e6ff;*/
+    /*background-color: #c2d6d6; */
+    background-color: #d9e6f2;
+    text-align: center;
+    color: #110707;
+    font-family: Arial, sans-serif;
+}
+.dropbox span {
+    margin-top: 0.9em;
+    display: block;
+}
+.dropbox.not-available {
+    background-color: #F88;
+}
+.dropbox.over {
+    background-color: #bfb;
+}
+div.upload {
+    display: inline-block;
+    display: none;
+    overflow: hidden;
+}
+.custom-file-upload {   
+    display: inline-block;
+    color: #010168;
+    cursor: pointer;
+}
+.custom-file-upload:hover{
+    color:#6161DE;
+}
+.data {
+    position: absolute; /*or fixed*/
+    right: 0px;
+    width: 130px;
+    height: 100px;
+    background-color:hsl(220, 42%, 99%); 
+    text-align: left;
+    color: #100F0F;
+    font-size: 20px;
+    font-family: Arial, sans-serif;      
+   }
+
+.button {
+    border-radius: 40px;
+    background-color: #8FAFE6;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 4px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+  }
+
+  .button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .button:hover{
+    padding-left: 25px;
+  }
+  
+  .button:hover:after {
+    opacity: 1;
+    left: 0;
+  }
+
+.next:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+.popover {
+    width:300px;
+    left: -650%;
+    top: 100%;
+    z-index: 9999;
+    display: block;
+    color: black;
+}
+
+.fa-trash-o:hover{
+    color:red;
+}
+
+.rzslider .rz-bar {
+    left: 0;
+    z-index: 1;
+    height: 6px;
+    width: 100%;
+    background: #8FAFE6;
+    border-radius: 2px;
+  }
+  
+  /*.rzslider .rz-bar-wrapper.rz-right-out-selection .rz-bar { 
+    background: #010168;
+  }*/
+  
+  .rzslider .rz-selection {  
+    z-index: 2;
+    background: #0b5494 ;
+    border-radius: 2px;
+  }
+
+  .blur{
+    filter: blur(2px);
+    pointer-events: none;
+  }

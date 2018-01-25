@@ -1,0 +1,73 @@
+<div class="pageContentContainer" ng-controller="DynamicFormController">
+
+    <div ng-show="loader" class="loader"></div>
+    <form ng-submit="submitForm()">
+    <div class="col-xs-12 col-md-12" ng-class="{blur: loader}">
+        <div class="row" ng-hide="flag" >
+            <div style="height: 25em;" class="col-xs-12 col-md-12">
+            
+                    <fieldset class="scheduler-border">
+                            <legend class="scheduler-border"><h5>Attributes of {{model.name | underscoreless}} Model</h5></legend>
+                <div style="height: 18em;max-height: 18em;overflow-y: auto;" id="style-default">
+
+                    
+                        <div ng-repeat="attr in result">
+
+
+                          
+                            <label class="control-label col-xs-7  requiredField" style="color: #0b5494; font-family: Times New Roman; font-size: 14px;">{{attr.keys | underscoreless }} </label>
+                            <div class="control col-xs-4 ">
+                                <input class="form-control" type="text" style="color: #0b5494; font-family: Times New Roman;width :80px;font-size: 14px;" ng-model="attr.values" required/>
+                            <br>
+                            </div>
+                        </div>
+
+
+                       
+                        
+
+
+
+                </div>
+
+     <!--           <center><button ng-click="submitForm()" class="btn btn-primary btn-md">Predict</button></center>-->
+                    </fieldset>
+            </div>
+
+         
+
+        </div>
+
+
+    <div class="row">
+    <div class="col-xs-12" ng-show="flag" style="height: 25em">
+       
+            <fieldset class="scheduler-border">
+                    <legend class="scheduler-border" style="text-align: center !Important"><h5>PREDICTION RESULT</h5></legend>
+            <div >
+                <div id="container1" style="min-width: 50%; max-width: 100%; height:20em; margin: 0 auto"></div>
+            </div>
+
+            </fieldset>
+        </div>
+    </div>
+
+<br>
+    <div class="row" style="padding-bottom:15px;">
+
+        <div class="col-lg-7">
+          
+            <input type="button" ng-click="predictAgain()" ng-show="flag" value="BACK" class="btn btn-primary" />
+
+            <input type="button" ng-click="goBack()" ng-hide="flag" value="BACK" class="btn btn-primary" />
+     
+            <input type="submit"  value="PREDICT" ng-hide="flag"  ng-disabled="model._id==undefined" class="btn btn-primary pull-right" style="margin-right: 10px;" />
+             <!--<button ng-click="submitForm()" ng-disabled="model._id==undefined" class="btn btn-success btn-md pull-right">Predict</button>-->
+        </div>
+
+    </div>
+</div>
+    </form>
+    
+
+</div>

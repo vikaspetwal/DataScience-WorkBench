@@ -1,0 +1,12 @@
+
+<div class="predictTabsHeight_Reg" ng-controller="PredictTabController_Reg">
+
+<div class="predictTabsHeading_Reg">
+<ul class="nav nav-pills nav-wizard">   
+   <li style="width: 50%" class={{predctTabColor_Reg.selectModal_Reg}}><a ng-click="changeTab_Reg('selectModal_Reg')" ui-sref=".selectModal" index="1" >Step 1: Model</a></li>
+   <li style="width: 50%" class={{predctTabColor_Reg.predictModal_Reg}}><a   index="2" >Step 2: Predict Result</a></li>
+ </ul>
+</div>
+ <br>
+   <div class="predictTabsBody_Reg" ui-view></div>
+</div>

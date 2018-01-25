@@ -1,0 +1,241 @@
+@media(min-width:768px) {
+
+.tabsHeight {
+  
+  height: 100%;
+
+}
+.tabsHeight > .tabsHeightChild1 {
+  
+  height:8%;
+  margin-top: 1%;
+   margin-bottom: 1%;
+  
+}
+
+.tabsHeight > .tabsHeightChild2 {
+  
+  height:85%;
+  border-style: solid;
+  border-width: 2px 2px 2px 2px;
+
+}
+
+
+.nav-pills.nav-wizard > li {
+  position: relative;
+  overflow: visible;
+
+  border-right: 15px solid transparent;
+  border-left: 15px solid transparent;
+}
+.nav-pills.nav-wizard > li + li {
+  margin-left: 0;
+}
+.nav-pills.nav-wizard > li:first-child {
+  border-left: 0;
+}
+.nav-pills.nav-wizard > li:first-child a {
+  border-radius: .5% 0 0 .5%;
+}
+.nav-pills.nav-wizard > li:last-child {
+  border-right: 0;
+}
+.nav-pills.nav-wizard > li:last-child a {
+  border-radius: 0 .5% .5% 0;
+}
+.nav-pills.nav-wizard > li a {
+  border-radius: 0;
+  background-color: #eee;
+}
+.nav-pills.nav-wizard > li:not(:last-child) a:after {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: -20px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  border-color: transparent transparent transparent #eee;
+  z-index: 150;
+}
+.nav-pills.nav-wizard > li:not(:first-child) a:before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: -20px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  border-color: #eee #eee #eee transparent;
+  z-index: 150;
+}
+
+
+}
+
+
+@media(max-width:414px) {
+
+
+
+.nav-pills.nav-wizard > li {
+  position: relative;
+  overflow: visible;
+
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+}
+.nav-pills.nav-wizard > li + li {
+  margin-left: 0;
+}
+.nav-pills.nav-wizard > li:first-child {
+  border-left: 0;
+}
+.nav-pills.nav-wizard > li:first-child a {
+  border-radius: 10% 0 0 10%;
+}
+.nav-pills.nav-wizard > li:last-child {
+  border-right: 0;
+}
+.nav-pills.nav-wizard > li:last-child a {
+  border-radius: 0 10% 10% 0;
+}
+.nav-pills.nav-wizard > li a {
+ font-size: 7px;
+  background-color: #eee;
+}
+.nav-pills.nav-wizard > li:not(:last-child) a:after {
+  position: absolute;
+  content: "";
+  top: 0px;
+  right: -20px;
+  width: 0px;
+  height: 0px;
+  
+  border-style: solid;
+  border-width: 15px 0 15px 15px;
+  border-color: transparent transparent transparent #eee;
+  z-index: 10;
+}
+.nav-pills.nav-wizard > li:not(:first-child) a:before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: -20px;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-width: 15px 0 15px 15px;
+  border-color: #eee #eee #eee transparent;
+  z-index: 10;
+}
+
+
+
+
+
+}
+
+
+
+
+
+.nav-pills.nav-wizard > li:hover:not(:last-child) a:after {
+  border-color: transparent transparent transparent #aaa;
+  
+}
+.nav-pills.nav-wizard > li:hover:not(:first-child) a:before {
+  border-color: #aaa #aaa #aaa transparent;
+}
+.nav-pills.nav-wizard > li:hover a {
+  background-color: #aaa;
+  color: #fff;
+}
+
+
+.nav-pills.nav-wizard > li.uploadDataSetU:not(:last-child) a:after {
+  border-color: transparent transparent transparent #0b5494;
+}
+.nav-pills.nav-wizard > li.uploadDataSetU:not(:first-child) a:before {
+  border-color: #0b5494#0b5494#0b5494 transparent;
+}
+
+.nav-pills.nav-wizard > li.uploadDataSetU a {
+  color:white;
+   text-decoration: underline;
+  background-color: #0b5494 ;
+}
+
+
+.nav-pills.nav-wizard > li.uploadDataSet:not(:last-child) a:after {
+  border-color: transparent transparent transparent #0b5494 ;
+}
+.nav-pills.nav-wizard > li.uploadDataSet:not(:first-child) a:before {
+  border-color: #0b5494#0b5494#0b5494  transparent;
+}
+
+.nav-pills.nav-wizard > li.uploadDataSet a {
+  color:white;
+  background-color: #0b5494 ;
+}
+
+
+
+.nav-pills.nav-wizard > li.attributeSelectionU:not(:last-child) a:after {
+  border-color: transparent transparent transparent #ff7c00;
+}
+.nav-pills.nav-wizard > li.attributeSelectionU:not(:first-child) a:before {
+  border-color: #ff7c00 #ff7c00 #ff7c00 transparent;
+}
+
+.nav-pills.nav-wizard > li.attributeSelectionU a {
+   color:white;
+    text-decoration: underline;
+  background-color: #ff7c00;
+}
+
+.nav-pills.nav-wizard > li.attributeSelection:not(:last-child) a:after {
+  border-color: transparent transparent transparent #ff7c00;
+}
+.nav-pills.nav-wizard > li.attributeSelection:not(:first-child) a:before {
+  border-color: #ff7c00 #ff7c00 #ff7c00 transparent;
+}
+
+.nav-pills.nav-wizard > li.attributeSelection a {
+   color:white;
+  background-color: #ff7c00;
+}
+
+
+
+.nav-pills.nav-wizard > li.trainModelU:not(:last-child) a:after {
+  border-color: transparent transparent transparent green;
+}
+.nav-pills.nav-wizard > li.trainModelU:not(:first-child) a:before {
+  border-color: green green green transparent;
+}
+
+.nav-pills.nav-wizard > li.trainModelU a {
+   color:white;
+    text-decoration: underline;
+  background-color: green;
+}
+
+
+.nav-pills.nav-wizard > li.trainModel:not(:last-child) a:after {
+  border-color: transparent transparent transparent green;
+}
+.nav-pills.nav-wizard > li.trainModel:not(:first-child) a:before {
+  border-color: green green green transparent;
+}
+
+.nav-pills.nav-wizard > li.trainModel a {
+   color:white;
+  background-color: green;
+}
+
+
+

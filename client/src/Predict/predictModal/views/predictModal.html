@@ -1,0 +1,47 @@
+<div class="predictModelBase" ng-controller="DynamicFormController">
+    <form class="predictModelBase" ng-submit="submitForm()">
+    <div class="predictModelBody" class="row" ng-class="{blur: loader}">
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 border1 predicModelBody1" ng-class="{blur: loader}">
+            <fieldset class="scheduler-border">
+                <legend class="scheduler-border">Attributes of {{model.name}} Model</legend>
+                    <div class="predictAttributes" style="overflow-y: auto;  overflow-x: hidden;" id="style-default">
+                        <div ng-repeat="attr in result">
+                            <label class="control-label col-xs-3 col-sm-3 col-md-3 col-lg-3  requiredField" style="color: #0b5494; font-family: Times New Roman;" data-toggle="tooltip" title="{{attr.keys}}">   {{attr.keys| limitTo: 9 }}{{attr.keys.length > 9 ? '...' : ''}}  </label>
+                            <div class="control col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                                <input class="form-control" type="text" style="color: #0b5494; font-family: Times New Roman;width :80px" ng-model="attr.values"
+                                    required/>
+                            </div>
+                        </div>
+                    </div>
+               
+            </fieldset>
+        </div>
+
+        <div  ng-show="flag" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 border1 predicModelBody2">
+
+            <fieldset class="scheduler-border">
+                <legend class="scheduler-border">Prediction of {{model.name}} Model</legend>
+                <div>
+                    <center>
+                    <div id="container1" style="min-width: 1px; max-width: 90%; margin: 0 auto" class="highchartHeight">
+                    </div>
+                    </center>
+                </div>
+            </fieldset>
+          
+                
+           
+        </div>
+        
+    </div>
+
+        <div class="predictModelPrevNext" class="row" ng-class="{blur: loader}">
+        <div class="col-lg-6">
+            <input type="button" ng-click="goBack()" value="BACK" class="btn btn-primary" />
+            <input type="submit"  value="PREDICT" ng-disabled="model._id==undefined" class="btn btn-primary pull-right" />
+        </div>
+    </div>
+     </form>
+
+     <center><div ng-show="loader" class="loader"></div></center>
+</div>

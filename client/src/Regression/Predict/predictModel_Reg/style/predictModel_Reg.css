@@ -1,0 +1,91 @@
+.predictModelBase_Reg {
+    height: 100%;
+}
+
+.predictModelBase_Reg > .predictModelBody_Reg {
+    height:80%;
+    margin-top: 1%; 
+}
+
+.predictModelBase_Reg > .predictModelBody_Reg > .predicModelBody1_Reg{
+    height:100%;
+}
+
+.predictModelBase_Reg > .predictModelBody_Reg > .predicModelBody2_Reg{
+    height:100%;
+  
+}
+
+.predictModelBase_Reg > .predictModelBody_Reg > .predicModelBody1_Reg > fieldset {
+    height:100%;
+}
+
+.predictModelBase_Reg > .predictModelBody_Reg > .predicModelBody1_Reg > fieldset > legend {
+   color: #0b5494;
+   font-size: 100% !Important; 
+}
+
+.predictModelBase_Reg > .predictModelBody_Reg > .predicModelBody2_Reg > fieldset {
+    height:100%;
+}
+
+.predictModelBase_Reg > .predictModelBody_Reg > .predicModelBody2_Reg > fieldset > legend {
+   color: #0b5494;
+   font-size: 100% !Important; 
+}
+
+.predictModelBase_Reg > .predictModelBody_Reg > .predicModelBody2_Reg > fieldset > div {
+    
+    height: 90% !Important;
+  
+}
+
+.predictModelBase_Reg > .predictModelPrevNext_Reg {
+    height:10%;
+    margin-top: 2%; 
+}
+
+
+@media screen and (max-height: 768px) {
+     .highchartHeight_Reg {
+        height: 290px;
+    }
+  
+    .predictAttributes_Reg {
+         height: 280px;
+         max-height: 280px
+    }
+}
+@media screen and (min-height: 799px)  {
+     .highchartHeight_Reg {
+        height: 380px;
+    }
+
+    .predictAttributes_Reg {
+         height: 380px;
+         max-height: 380px
+    }
+}
+
+@media screen and (min-height: 900px) {
+    .highchartHeight_Reg {
+        height: 400px;
+    }
+
+    .predictAttributes_Reg {
+         height: 400px;
+         max-height: 400px
+    }
+ 
+}
+
+
+.nav-tabPredict > li {
+    float:none;
+    display:inline-block;
+    zoom:1;
+}
+
+.nav-tabPredict {
+    text-align:center;
+}

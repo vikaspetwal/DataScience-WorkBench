@@ -1,0 +1,54 @@
+.mainAttrDiv{
+
+  width: 100%;
+    overflow-y: auto; margin-bottom:0px
+}
+
+
+
+
+#atrributeDiv{
+    width: 100%;
+    max-height: 24em;
+    overflow-y: auto;
+    padding-top:0px
+}
+
+
+#insideAttrDiv{
+
+    height:22em;
+}
+
+.attrSpan{
+
+    color: #0b5494; font-size: 13px;
+}
+
+.relevantAttr{
+    color: green;
+
+}
+
+.irrelevantAttr{
+
+    color: red;
+}
+
+#selected{
+
+    color: green;
+    margin-left: 10%;
+}
+
+.notSelected{
+
+    color: red;
+    margin-left:0;
+}
+
+#attChartDiv{
+    text-align: center;
+    min-width:50%; 
+    
+}

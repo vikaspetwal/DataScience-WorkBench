@@ -1,0 +1,3 @@
+mongoimport --db MLDB --collection regtypes --file C:\Users\spbola\Desktop\Desktop-version\Machine_Learning_Reg\regtypes.json
+
+mongoimport --db MLDB --collection users --file C:\Users\spbola\Documents\newrepo\Machine-Learning\users.json

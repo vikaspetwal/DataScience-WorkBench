@@ -1,0 +1,140 @@
+#trainingSideNav{
+
+    display:inline-block
+}
+
+.selectedTab{
+
+    background-color: #25293c;
+
+}
+#SideNavlogos{
+
+
+    font-size: 15px;
+}
+
+.sideNavNames{
+
+    font-size: 12px;
+}
+
+.openSideNav{
+
+    font-size:37px;cursor:pointer
+}
+
+#tabsDiv{
+
+    display:inline-block
+
+}
+
+#TrainingnavValues{
+
+
+    width: 33.33%;
+}
+
+.tabStep{
+    color:white; white-space:nowrap;
+}
+
+
+
+
+
+
+
+.nav-pills.nav-wizard > li.uploadDataSetU:not(:last-child) a:after {
+    border-color: transparent transparent transparent #0b5494;
+  }
+  .nav-pills.nav-wizard > li.uploadDataSetU:not(:first-child) a:before {
+    border-color: #0b5494#0b5494#0b5494 transparent;
+  }
+  
+  .nav-pills.nav-wizard > li.uploadDataSetU a {
+    color:white;
+     text-decoration: underline;
+    background-color: #0b5494 ;
+  }
+  
+  
+  .nav-pills.nav-wizard > li.uploadDataSet:not(:last-child) a:after {
+    border-color: transparent transparent transparent #0b5494 ;
+  }
+  .nav-pills.nav-wizard > li.uploadDataSet:not(:first-child) a:before {
+    border-color: #0b5494#0b5494#0b5494  transparent;
+  }
+  
+  .nav-pills.nav-wizard > li.uploadDataSet a {
+    color:white;
+    background-color: #0b5494 ;
+  }
+  
+  
+  
+  .nav-pills.nav-wizard > li.attributeSelectionU:not(:last-child) a:after {
+    border-color: transparent transparent transparent #ff7c00;
+  }
+  .nav-pills.nav-wizard > li.attributeSelectionU:not(:first-child) a:before {
+    border-color: #ff7c00 #ff7c00 #ff7c00 transparent;
+  }
+  
+  .nav-pills.nav-wizard > li.attributeSelectionU a {
+     color:white;
+      text-decoration: underline;
+    background-color: #ff7c00;
+  }
+  
+  .nav-pills.nav-wizard > li.attributeSelection:not(:last-child) a:after {
+    border-color: transparent transparent transparent #ff7c00;
+  }
+  .nav-pills.nav-wizard > li.attributeSelection:not(:first-child) a:before {
+    border-color: #ff7c00 #ff7c00 #ff7c00 transparent;
+  }
+  
+  .nav-pills.nav-wizard > li.attributeSelection a {
+     color:white;
+    background-color: #ff7c00;
+  }
+  
+  
+  
+  .nav-pills.nav-wizard > li.trainModelU:not(:last-child) a:after {
+    border-color: transparent transparent transparent green;
+  }
+  .nav-pills.nav-wizard > li.trainModelU:not(:first-child) a:before {
+    border-color: green green green transparent;
+  }
+  
+  .nav-pills.nav-wizard > li.trainModelU a {
+     color:white;
+      text-decoration: underline;
+    background-color: green;
+  }
+  
+  
+  .nav-pills.nav-wizard > li.trainModel:not(:last-child) a:after {
+    border-color: transparent transparent transparent green;
+  }
+  .nav-pills.nav-wizard > li.trainModel:not(:first-child) a:before {
+    border-color: green green green transparent;
+  }
+  
+  .nav-pills.nav-wizard > li.trainModel a {
+     color:white;
+    background-color: green;
+  }
+  
+  
+  
+  
+
+
+
+
+
+
+
+

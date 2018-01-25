@@ -1,0 +1,132 @@
+html, body, .container-fluid {
+    height:100%;
+}
+.menusrow {
+    height: 50%;
+    background-color: black;
+}
+.menusrow2 {
+    height: 30%;
+}
+.navrow {
+    height: 10%;
+    background-color: black;
+}
+.brandrow {
+    height: 10%;
+    background-color: black;
+}
+
+
+
+/*Middle Part */
+.menusrow > div {
+    height: 100%;
+}
+
+.menusrow > div > div {
+    height: 100%;
+}
+
+
+.menusrow >  a {
+    height: 90%;
+}
+
+.menusrow2 > div {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black ; 
+    background-color: aliceblue;
+}
+
+.menusrow2 > div > div  {
+    height: 80%;
+    width: 49.5%; 
+}
+
+
+.menusrow2 > div > div > div  {
+    height: 100%;
+    width: 50%; 
+}
+
+.menusrow2 > div > div > div > img  {
+    height: 100%;
+    width: 100%; 
+}
+
+
+
+
+
+/* Headng*/
+.brandrow > div {
+
+    height: 100%
+}
+
+.brandrow > div >  img {
+    height: 80%;
+    width: 80%;
+   margin-left: 10%;
+   margin-top: 4%;
+   margin-bottom: 4%;
+}
+
+.brandrow > div > p{
+
+    height: 100%
+}
+
+
+@media only screen and (max-width: 450px) {
+
+  .brandrow > div >  p {
+    color:#0070ad;
+    font-size: 90% !Important;
+}
+}
+
+@media only screen and (min-width: 460px) {
+
+  .brandrow > div >  p {
+    color:#0070ad;
+    margin-top: 1.5%;
+    font-size: 170%;
+}
+}
+
+
+
+.homeContent {
+ margin-top: 15%; 
+}
+
+
+
+/*.bottom-left {
+    position: absolute;
+    bottom: 20%;
+    left: 10%;
+    color: floralwhite;
+    ;
+  
+    height:20%; 
+    width:70%
+}
+
+.bottom-right {
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    color:white;
+    height:20%; 
+    width:25%
+}
+.card-button{
+ padding-top: 5px;;
+    border: 1px solid #181860;
+    border-radius: 5px;
+
+}*/

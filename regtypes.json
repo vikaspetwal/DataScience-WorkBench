@@ -1,0 +1,14 @@
+{
+            
+            "name": "Linear Regression",
+            "shortName": "linear",
+            "description": "It is a linear approach for modeling the relationship between a scalar dependent variable and one or more explanatory variables (or independent variables).",
+            "date": "2017-09-08T15:32:55.782Z"
+}
+{
+           
+            "name": "Non-linear Regression",
+            "shortName": "nonlinear",
+            "description": "It is a form of regression analysis in which the relationship between the independent variable and the dependent variable is modelled as an nth degree polynomial.",
+            "date": "2017-09-08T15:39:55.782Z"
+}

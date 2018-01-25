@@ -1,0 +1,24 @@
+{
+  "name": "mldemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Spanadana Bola",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "connect-redis": "^3.3.0",
+    "ejs": "^2.5.7",
+    "express": "^4.15.4",
+    "express-session": "^1.15.5",
+    "fs": "0.0.1-security",
+    "hashcode": "^1.0.3",
+    "mongoose": "^4.11.10",
+    "multer": "^1.3.0",
+    "node-fetch": "^1.7.2",
+    "path": "^0.12.7"
+  } 
+}

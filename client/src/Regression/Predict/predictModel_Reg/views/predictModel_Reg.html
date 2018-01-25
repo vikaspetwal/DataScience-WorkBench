@@ -1,0 +1,126 @@
+<div class="predictModelBase_Reg" ng-controller="DynamicFormController_Reg">
+    <form class="predictModelBase_Reg" ng-submit="submitForm()">
+    <div class="predictModelBody_Reg" class="row">
+         
+        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 border1 predicModelBody1_Reg" ng-class="{blur: loader}">
+           
+                   <!-- <ul class="nav nav-tabPredict" style="background-color: #312A25">
+                            <li class="active"><a style="color: white;" href="#predict" data-toggle="tab">Predict</a></li>
+                            <li><a href="#failure" style="color: white;" ng-click="hidePrediction()" data-toggle="tab">Failure</a></li>
+                        </ul>  -->
+                        <ul class="nav nav-tabs nav-justified">
+                                <li class="nav-item">
+                                    <a class="nav-link active" ng-click="finalPredict()" data-toggle="tab" href="#predict" role="tab">Predict</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" data-toggle="tab" ng-click="finalFail()" href="#failure" role="tab">Failure</a>
+                                </li>
+                               
+                            </ul>
+                            
+                   
+
+                            <div class="tab-content card">
+                                    <div class="tab-pane fade in active" id="predict" role="tabpanel">
+               <fieldset class="scheduler-border">
+                <legend class="scheduler-border" style="color: #0b5494;font-size: 15px;">Attributes of {{model.name}} Model</legend>
+         
+                    <div class="predictAttributes_Reg" style="overflow-y: auto;" id="style-default">
+                        <div ng-repeat="attr in result">
+                            <label class="control-label col-md-3  requiredField_Reg" style="color: #0b5494; font-family: Times New Roman;">{{attr.keys}} </label>
+                            <div class="control col-md-3 ">
+                                <input class="form-control" type="text" style="color: #0b5494; font-family: Times New Roman;width :70px" ng-model="attr.values"
+                                    required/>
+                            </div>
+                        </div>
+                    </div>
+                    </fieldset>
+                 </div>
+                               
+
+
+                            
+                 <div class="tab-pane fade" id="failure" role="tabpanel">
+                               <fieldset class="scheduler-border">
+                                <legend class="scheduler-border" style="color: #0b5494;font-size: 15px;">Enter values of Threshold and Start Time</legend>
+                         
+                                    <div class="predictAttributes_Reg" style="overflow:hidden;" id="style-default">
+                                    <div class="row">
+                                        <div class="col-sm-3"> 
+                                        <b><span style="color: #0b5494; font-family: Times New Roman;">Threshold</span></b>
+                                    </div>  
+                              
+                                    <div class="col-sm-3"> 
+                                         
+                                    <input type="number" placeholder="0">
+                                </div>
+                                    </div>
+                                    <br><br>
+                                    <div class="row">
+                                            <div class="col-sm-3"> 
+                                            <b><span style="color: #0b5494; font-family: Times New Roman;">Start Time</span></b>
+                                        </div>  
+                                  
+                                        <div class="col-sm-3"> 
+                                             
+                                        <input type="number" placeholder="0">
+                                    </div>
+                                        </div>
+                                    </div>
+                                    </fieldset>
+                                 </div>
+                     </div>
+                                            
+           
+        </div>
+
+        <div  ng-show="flag" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 border1 predicModelBody2_Reg">
+
+            <fieldset class="scheduler-border">
+                <legend class="scheduler-border">Prediction of {{model.name}} Model</legend>
+                <div>
+                    <center>
+                    <div id="container1" style="min-width: 1px; max-width: 90%; margin: 0 auto" class="highchartHeight_Reg">
+                    </div>
+                    </center>
+                </div>
+            </fieldset>
+          
+                
+           
+        </div>
+
+        <div  ng-show="failFlag" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 border1 predicModelBody2_Reg">
+                
+                            <fieldset class="scheduler-border">
+                                <legend class="scheduler-border">Failure Graph</legend>
+                                <div>
+                                    <center>
+                                    <div id="container" style="min-width: 1px; max-width: 90%; margin: 0 auto" class="highchartHeight_Reg">
+                                    </div>
+                                    </center>
+                                </div>
+                            </fieldset>
+                          
+                                
+                           
+        </div>
+
+
+
+
+
+        
+    </div>
+    <br>
+  
+
+        <div class="predictModelPrevNext_Reg" class="row">
+        <div class="col-lg-6">
+            <input type="button" ng-click="goBack_Reg()" value="BACK" class="btn btn-primary" />
+            <input type="submit" ng-show="toPredict" value="PREDICT" ng-disabled="model._id==undefined" class="btn btn-primary pull-right" />
+            <input type="button" ng-click="showFail_Reg()" ng-hide="toPredict" value="PREDICT" ng-disabled="model._id==undefined" class="btn btn-primary pull-right" />
+        </div>
+    </div>
+     </form>
+</div>

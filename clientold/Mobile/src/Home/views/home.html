@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <!-- <base href="/"> -->
+    <title>Machine-Learning</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="../../../bower_components/highcharts/js/highcharts.js"></script>
+    <script src="../../../bower_components/highcharts/js/highcharts-more.js"></script>
+    <script src="../../../bower_components/highcharts/modules/exporting.js"></script>
+    <script src="../../../bower_components/highcharts/modules/solid-gauge.js"></script>
+    <script src="../../../bower_components/angular/angular.min.js"></script>
+    <script src="../../../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../../../bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <script src="../../../bower_components/angular-animate/angular-animate.js"></script>
+    <script src="../../../bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script type="text/javascript" src="../../../bower_components/angular-number-picker/dist/angular-number-picker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../../bower_components/angularjs-slider/dist/rzslider.css" />
+    <script src="../../../src/ui-bootstrap.js"></script>
+    <script src="../../../bower_components/jquery/dist/jquery.min.js"></script>
+
+    <script src="../../../bower_components/ngstorage/ngStorage.js"></script>
+    <link rel="stylesheet" href="../../../bower_components/angular-ui-switch/angular-ui-switch.min.css" />
+    <script src="../../../bower_components/angular-ui-switch/angular-ui-switch.min.js"></script>
+    <script src="../../../bower_components/angularjs-slider/dist/rzslider.min.js"></script>
+    <script src="../../../src/app.js"></script>
+    <script src="../../../bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="../../../src/route.js"></script>
+
+
+    <link href="../../../bower_components/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <script src="../../../src/Training/trainingTabs.js"></script>
+    <script src="../../../src/Predict/predictTabs.js"></script>
+    <script src="../../../src/Predict/selectModal/js/select.js"></script>
+    <link rel="stylesheet" href="../../../src/Predict/selectModal/style/select.css">
+    <script src="../../../src/Predict/predictModal/js/predict.js"></script>
+    <link rel="stylesheet" href="../../../src/Predict/predictModal/style/predict.css">
+    <script src="../../../src/Training/TrainModal/js/trainModal.js"></script>
+    <link rel="stylesheet" href="../../../src/Training/TrainModal/style/trainModal.css">
+    <script src="../../../src/Training/AttributeSelection/js/attributeSelection.js"></script>
+    <script src="../../../src/Home/js/home.js"></script>
+    <script src="../../../src/Training/UploadFile/js/upload.js"></script>
+    <link rel="stylesheet" href="../../../src/Training/UploadFile/style/style.css">
+    <link rel="stylesheet" href="../../../src/Home/style/styles.css">
+
+</head>
+
+<body ng-app="MachineLearning" background="../../../src/Home/images/Blockchain-Tech.jpg">
+
+    <div ng-controller="HomeController">
+
+
+
+
+        <div class="mainHeader">
+         
+                    <div class="navbar-header">
+                        <a href="../../../src/Home/views/home.html" target="_self"><img class="logoImage" src='../../../src/Template/images/capgemini-logo.png'/></a>
+                        <span class="appName">Machine Learning For Data Science</span>
+
+
+
+
+
+          
+
+
+
+            </div>
+
+        </div>
+       
+        <div background="../../../src/Home/images/Blockchain-Tech.jpg" class="mainDivHome">
+            <h1>
+                <center>DATA SCIENCE AND MACHINE LEARNING</center>
+            </h1>
+            <br><br><br>
+            <center>
+                <button class="button buttonLeft" ng-click="training()">Train</button><br>
+                <br><br>
+                <button class="button buttonRight" ng-click="predict()">Predict</button></center>
+        </div>
+
+
+
+
+
+        <div class="row">
+
+
+            <footer>
+                <nav class="navbar navbar-default navbar-fixed-bottom" id="footerMain">
+
+                    <div class="footerContent">
+                        <p> <a href="mailto:nathanael-theophilus.easterson@capgemini.com" id="mailTo" class="pull-left">Click here to report issues</a>                            &copy; 2017 Capgemini</p>
+                    </div>
+                </nav>
+
+
+            </footer>
+        </div>
+
+
+    </div>
+
+
+
+
+</body>
+
+</html>

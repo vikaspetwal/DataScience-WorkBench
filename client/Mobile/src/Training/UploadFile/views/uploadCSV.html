@@ -1,0 +1,234 @@
+<div class="pageContentContainer" ng-controller="FileUploadCtrl">
+
+
+    <div class="row" id="uploadFileDiv">
+
+
+
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border">
+                <h5>Upload a .csv file here</h5>
+            </legend>
+
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                  <div class="modal-content">
+                        <div class="modal-header" style="background-color: #25293c">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h5 class="modal-title">Don't have a CSV file ?</h5>
+                        </div>
+                        <div class="modal-body">
+                            <button type="button" class="btn btn-default" data-toggle="modal" data-dismiss="modal" data-target="#myModal2">Try a Sample file</button>
+                            <button type="button" class="btn btn-default pull-right" data-dismiss="modal">No Thanks</button>
+                        </div>
+                        <div class="modal-footer">
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+
+            <div class="modal fade" id="myModal2" role="dialog">
+                <div class="modal-dialog"> -->
+
+                    <!-- Modal content-->
+                     <div class="modal-content">
+                        <div class="modal-header" style="background-color: #25293c">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h5 class="modal-title">Choose a Sample File</h5>
+                        </div>
+                        <div class="modal-body">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <img src="../../../Mobile/src/Home/images/file.jpg" ng-click="sampleUplaod(fileNames.creditCard)" data-dismiss="modal" style="height: 70px; width:100px;">
+                                    </td>
+                                    <td>
+                                        <img src="../../../Mobile/src/Home/images/file.jpg" data-dismiss="modal" ng-click="sampleUplaod(fileNames.spamData)" style="height: 70px; width:100px;">
+                                    </td>
+                                    <td>
+                                        <img src="../../../Mobile/src/Home/images/file.jpg" data-dismiss="modal" ng-click="sampleUplaod(fileNames.iris)" style="height: 70px; width:100px;">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h5>
+                                            <center>CreditCard.csv</center>
+                                        </h5>
+                                    </td>
+                                    <td>
+                                        <h5>
+                                            <center>SpamData.csv</center>
+                                        </h5>
+                                    </td>
+                                    <td>
+                                        <h5>
+                                            <center>IrisData.csv</center>
+                                        </h5>
+                                    </td>
+
+                                </tr>
+                            </table>
+
+
+
+
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div> 
+
+
+
+            <!-- Drop Box -->
+
+            <div id="dropbox" class="dropbox" ng-class="dropClass">
+                <div ng-if="!sampleFileFlag" ng-hide="files.length" >
+
+
+                     <span style="font-size: 10px;margin-right: 3%;" class="glyphicon glyphicon-link pull-right" ng-click="deleteModel(items)"
+                        data-toggle="modal" data-target="#myModal"></span> 
+                    <br>
+
+
+                    <div class="upload">
+                        <input type="file" name="file-upload" id="file-upload" class="inputfile" ng-model-instant id="fileToUpload" onchange="angular.element(this).scope().setFiles(this)"
+                        />
+                    </div>
+                    <label for="file-upload" class="custom-file-upload text-center">
+                    Select a file for upload &nbsp;<i class="fa fa-cloud-upload"></i> 
+                </label>
+
+
+
+
+                </div>
+
+                <div ng-show="files.length">
+
+
+                    <div ng-if="!sampleFileFlag" ng-repeat="file in files.slice(0)">
+
+                        <span class="fileName"> <i class="fa fa-file-text-o" id="fileLogo"></i>  {{file.webkitRelativePath || file.name}}
+                            &nbsp;&nbsp;<i class="fa fa-trash-o" ng-click="removeFile()" aria-hidden="true"> </i>
+                           
+                                
+                <div>
+                 
+                        
+                   
+                   <!-- <input type="button" class="button" value="upload" ng-click="uploadFile()"/>-->
+                        </div>
+                    </span>
+                    </div>
+
+              
+
+               
+
+                        
+
+
+                </div>
+                <div ng-if="sampleFileFlag">
+                        
+                        <span class="fileName"> <i class="fa fa-file-text-o" id="fileLogo"></i>  {{sampleFile}}.csv
+                            &nbsp;&nbsp;<i class="fa fa-trash-o" ng-click="removeSampleFile()" aria-hidden="true"> </i>
+                           
+         
+                    </span>
+                                           
+                    </div>
+
+            </div>
+
+        </fieldset>
+
+
+
+    </div>
+    <br>
+
+    <div class="row" id="dataSetSeg">
+
+
+
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border">
+                <h5>Dataset segregation</h5>
+            </legend>
+
+
+            <table class="table" id="dataSetSegTable">
+                <tr class="firstTr">
+                    <td><b>
+                    <span class="dataSetLabel">Training  % </span></b>
+                        <span class="dataSetValue"><input type="number" id="formValues" class="form-control"  ng-model="slider.value" ></span>
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td class="secondTd"><b>
+                    <span class="dataSetLabel">Testing  % </span>
+                </b>
+
+                        <span class="dataSetValue"><input class="form-control" ng-model="testing" type="number" id="formValues" ></span>
+                    </td>
+                </tr>
+
+
+            </table>
+        </fieldset>
+
+
+    </div>
+    <br><br><br>
+
+    <div class="row " id="sliderDiv">
+
+
+        <fieldset class="scheduler-border">
+            <legend class="scheduler-border">
+                <h5>Move the slider to define training and testing</h5>
+            </legend>
+
+
+            <rzslider rz-slider-model="slider.value" rz-slider-options="slider.options"></rzslider>
+
+
+        </fieldset>
+    </div>
+
+    <br><br><br>
+    <div class="row" ng-hide="sampleFileFlag" id="nextButtonDiv">
+        <div class="col-xs-12">
+
+
+            <input type="button" ng-disabled="!files.length" ng-click="goNext()" value="NEXT" class="btn btn-primary pull-right " />
+        </div>
+
+    </div>
+
+    <div class="row" ng-show="sampleFileFlag" id="nextButtonDiv">
+        <div class="col-xs-12">
+
+
+            <input type="button" ng-click="goNextSample()" value="NEXT" class="btn btn-primary pull-right " />
+        </div>
+
+    </div>
+</div>

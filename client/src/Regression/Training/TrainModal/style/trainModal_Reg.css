@@ -1,0 +1,171 @@
+.mainClassifierHeight {
+    height: 100%;
+}
+
+.mainClassifierHeight > .classifierHeightMain {
+    height: 55%; 
+    margin-top: 1%;
+}
+
+.mainClassifierHeight > .classifierDataHeightMain {
+    height: 28%;
+    margin-top: 1%; 
+}
+
+
+/*Last Portion*/
+
+.mainClassifierHeight > .NextPrevBtn {
+    height: 10%; 
+}
+
+
+/*Mid Part*/
+.mainClassifierHeight > .classifierDataHeightMain > .classfierDataHeight{
+    height: 100%; 
+}
+
+.mainClassifierHeight > .classifierDataHeightMain > .classfierDataHeight > fieldset{
+    height: 100%; 
+}
+
+.mainClassifierHeight > .classifierDataHeightMain > .classfierDataHeight > fieldset > legend{
+    color: #0b5494;
+   font-size: 100% !Important; 
+}
+
+
+
+/*Upper Part*/
+
+.mainClassifierHeight > .classifierHeightMain > .classifierHeight {
+    height: 100%;
+  
+}
+
+.mainClassifierHeight > .classifierHeightMain > .classifierHeight > fieldset{
+    height: 100%;
+}
+
+.mainClassifierHeight > .classifierHeightMain > .classifierHeight > fieldset > legend{
+    color: #0b5494;
+   font-size: 100% !Important; 
+}
+
+
+.mainClassifierHeight > .classifierHeightMain > .classifierHeight > fieldset > .classifierDivHeight{
+    height: 70%;
+    
+}
+
+@media screen and (max-height: 768px) {
+    .setClassifierHeight {
+    height: 120px !Important;
+    }
+}
+@media screen and (min-height: 799px)  {
+    .setClassifierHeight {
+    height: 170px !Important;
+    }
+ 
+}
+
+@media screen and (min-height: 900px) {
+    .setClassifierHeight {
+    height: 220px !Important;
+    }
+ 
+}
+
+
+/*.mainClassifierHeight > .classifierHeightMain > .classifierHeight > fieldset > .classifierDivHeight >  .div1 {
+    height: 100%;
+      margin-left: 5%;
+    cursor:pointer;
+}
+
+.mainClassifierHeight > .classifierHeightMain > .classifierHeight > fieldset > .classifierDivHeight >  .div2 {
+    height: 100%;
+    cursor:pointer;
+    margin-left: 5%;
+   
+}*/
+
+.selected {
+    background: teal
+    }
+
+
+/*.mainClassifierHeight > .classifierHeightMain .classifierHeight {
+    height: 100%; 
+
+}
+*/
+/*.mainClassifierHeight > .classifierHeightMain .classifierHeight > .classifierBaseDiv {
+    height: 100%;
+   
+   
+}
+
+.mainClassifierHeight > .classifierHeightMain .classifierHeight > .classifierBaseDiv > fieldset {
+    height: 100% !Important;
+}
+
+.mainClassifierHeight > .classifierHeightMain .classifierHeight > .classifierBaseDiv > fieldset > legend {
+    font-size: 100%;
+}
+
+
+.mainClassifierHeight > .classifierHeightMain .trainModelBtn {
+    height: 20%;
+}*/
+
+
+
+    .offer{
+        background:#0b5494; border:3px solid white; box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); margin: 15px 0; overflow:hidden;
+    }
+    .offer-radius{
+        border-radius:10px;
+    }
+    .offer-danger {	border-color: #d9534f; }
+    .offer-danger .shape{
+        border-color: transparent #d9534f transparent transparent;
+        border-color: rgba(255,255,255,0) #d9534f rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+    .offer-success {	border-color: #5cb85c; }
+    .offer-success .shape{
+        border-color: transparent #5cb85c transparent transparent;
+        border-color: rgba(255,255,255,0) #5cb85c rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+    .offer-default {	border-color: #999999; }
+    .offer-default .shape{
+        border-color: transparent #999999 transparent transparent;
+        border-color: rgba(255,255,255,0) #999999 rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+    .offer-primary {	border-color: #428bca; }
+    .offer-primary .shape{
+        border-color: transparent #428bca transparent transparent;
+        border-color: rgba(255,255,255,0) #428bca rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+    .offer-info {	border-color: #5bc0de; }
+    .offer-info .shape{
+        border-color: transparent #5bc0de transparent transparent;
+        border-color: rgba(255,255,255,0) #5bc0de rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+    .offer-warning {	border-color: #f0ad4e; }
+    .offer-warning .shape{
+        border-color: transparent #f0ad4e transparent transparent;
+        border-color: rgba(255,255,255,0) #f0ad4e rgba(255,255,255,0) rgba(255,255,255,0);
+    }
+    
+    .shape-text{
+        color:#fff; font-size:12px; font-weight:bold; position:relative; right:-40px; top:2px; white-space: nowrap;
+        -ms-transform:rotate(30deg); /* IE 9 */
+        -o-transform: rotate(360deg);  /* Opera 10.5 */
+        -webkit-transform:rotate(30deg); /* Safari and Chrome */
+        transform:rotate(30deg);
+    }	
+    .offer-content{
+        padding:0 20px 10px;
+    }

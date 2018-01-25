@@ -1,0 +1,106 @@
+<div class="attributeSelectionBase" ng-controller="AttributeSelection">
+
+    <div class="attributeHeader" class="row" ng-class="{blur: loader}">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 border1 attributeSelectorField ">
+            <fieldset class="scheduler-border">
+                <legend class="scheduler-border">Recursive Feature Elimination technique has been used for finding relevence of attributes.Select attributes for training
+                    from the given set of attributes</legend>
+                <div class="chartSelectionTabs" class="row">
+                    <ul class="nav nav-tabs">
+                        <li class="active"><a style="color: #0b5494" href="#percentage" data-toggle="tab">Percentage</a></li>
+                        <li><a href="#scatter" style="color: #0b5494" data-toggle="tab">Scatter</a></li>
+                       <!-- <li><a href="#histogram" style="color: #0b5494" data-toggle="tab">Histogram</a></li>-->
+                    </ul>
+                    <div id="style-13"  class="tab-content" >
+                        <div class="tab-pane fade in active" id="percentage">
+                            
+                            <div  ng-repeat="data in chartDataPercentage">
+
+                            <div style="height: 300px !Important;" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 well ">
+                                
+	                            
+
+                                <span class="pull-left" style="color: #0b5494; font-size: 15px;"> {{data.attributeName}} [<b> 
+                                    <span ng-if="data.relevenceValue == 'Relevent'" style="color: green;"> {{data.relevenceValue}} </span>
+                                    <span ng-if="data.relevenceValue == 'Irrelevent'" style="color: red;"> {{data.relevenceValue}} </span></b>]
+                                </span>
+                                <switch class="pull-right" id="enabled" name="enabled" ng-model="data.relevance" class="green"></switch>
+                                <span ng-switch="data.relevance">
+                                    <span ng-switch-when="true" class="pull-right" style="color: green;margin-right: 10px;">Selected</span>
+                                    <span ng-switch-when="false" class="pull-right" style="color: red;margin-right: 10px;">Not-Selected</span>
+                                    <span ng-switch-default>...</span>
+                                </span>
+                                
+                                <center>
+                               <div class="pull-middle"  style="min-width: 300px;width:470px; height: 170px; margin-top: 25px;" high-chart="data"></div>
+                                </center>
+                               
+                                <!--  <h5 class="pull-right"><center>Rank:{{data.rank}} </center></h5>-->
+                                
+                            </div>
+                            
+                        
+                             
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="scatter">
+
+                            <div  ng-repeat="data in chartDataScatter">
+                            <div style="height: 300px !Important;" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 well">
+                                 
+                                <span class="pull-left" style="color: #0b5494; font-size: 15px;"> {{data.attributeName}} [<b> 
+                                    <span ng-if="data.relevenceValue == 'Relevent'" style="color: green;"> {{data.relevenceValue}} </span>
+                                    <span ng-if="data.relevenceValue == 'Irrelevent'" style="color: red;"> {{data.relevenceValue}} </span></b>]
+                                </span>
+                                <switch class="pull-right" id="enabled" name="enabled" ng-model="data.relevance" class="green"></switch>
+                                <span ng-switch="data.relevance">
+                                    <span ng-switch-when="true" class="pull-right" style="color: green;margin-right: 10px;">Selected</span>
+                                    <span ng-switch-when="false" class="pull-right" style="color: red;margin-right: 10px;">Not-Selected</span>
+                                    <span ng-switch-default>...</span>
+                                </span>
+                                
+                                <center>
+                               <div class="pull-middle" style="min-width: 300px;width:470px; height: 170px; margin-top: 25px;" high-chart="data"></div>
+                               </center>
+                               <!--  <h5 class="pull-right"><center>Rank:{{data.rank}} </center></h5>-->
+                            </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="histogram">
+                            <div  ng-repeat="data in chartDataHistogram">
+                            <div style="height: 300px !Important;" class="col-xs-6 col-sm-6 col-md-6 col-lg-6 well">
+                                 
+                                <span class="pull-left" style="color: #0b5494; font-size: 15px;"> {{data.attributeName}} [<b> 
+                                    <span ng-if="data.relevenceValue == 'Relevent'" style="color: green;"> {{data.relevenceValue}} </span>
+                                    <span ng-if="data.relevenceValue == 'Irrelevent'" style="color: red;"> {{data.relevenceValue}} </span></b>]
+                                </span>
+                                <switch class="pull-right" id="enabled" name="enabled" ng-model="data.relevance" class="green"></switch>
+                                <span ng-switch="data.relevance">
+                                    <span ng-switch-when="true" class="pull-right" style="color: green;margin-right: 10px;">Selected</span>
+                                    <span ng-switch-when="false" class="pull-right" style="color: red;margin-right: 10px;">Not-Selected</span>
+                                    <span ng-switch-default>...</span>
+                                </span>
+                                
+                                <center>
+                               <div class="pull-middle" style="min-width: 300px;width:470px; height: 170px; margin-top: 25px;" high-chart="data"></div>
+                                </center>
+                               <!-- <h5 class="pull-right"><center>Rank:{{data.rank}} </center></h5>-->
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <div class="attributeNextPrev" class="row" ng-class="{blur: loader}">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 border1 attributeNextPrevCol ">
+            <input type="button" ng-click="goBack()" value="BACK" class="btn btn-primary" />
+            <input type="button" ng-click="goNext()" value="NEXT" class="btn btn-primary pull-right " />
+        </div>
+    </div>
+<center><div ng-show="loader" class="loader"></div></center>
+</div>

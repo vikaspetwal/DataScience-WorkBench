@@ -1,0 +1,14 @@
+{
+            
+            "name": "Decision Tree",
+            "shortName": "Decision_Tree",
+            "description": "A decision tree is a graph that uses a branching method to illustrate every possible outcome of a decision. Programmatically, they can be used to assign monetary/time or other values to possible outcomes so that decisions can be automated.",
+            "date": "2017-09-08T15:32:55.782Z"
+}
+{
+           
+            "name": "K-Nearest Neighbors",
+            "shortName": "KNN",
+            "description": "K nearest neighbors stores all available cases and classifies new cases based on a similarity measure (e.g., distance functions). KNN has been used in pattern recognition.",
+            "date": "2017-09-08T15:39:55.782Z"
+}
